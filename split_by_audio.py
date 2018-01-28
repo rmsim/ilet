@@ -5,6 +5,7 @@ import sys
 import copy
 import subprocess
 import re
+import time
 
 
 thresh = 1. # change this depending on your silence theshold
@@ -71,12 +72,21 @@ def split_video(video_filename,time_split,signal,ind_split,tot_seconds):
     for i in range(len(break_points[:-1])):
         start_time = str(break_points[i])
         end_time = str(break_points[i+1])
-        #command = "ffmpeg -i "+video_filename+" -ss "+start_time+" -t "+end_time+" seg"+str(i)+".mov"
-        #subprocess.call(command, shell=True)
-        name = "seg"+str(i)+".mov"
+        name = video_filename[:-4]+str(i)+".mov"
         split_movie_names.append(name)
-        process = subprocess.Popen(["ffmpeg","-i",video_filename,"-ss",start_time,"-t",end_time,name], stdin = subprocess.PIPE,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        process.stdin.write("y")
+
+        try:
+                process = subprocess.Popen(["ffmpeg","-i",video_filename,"-ss",start_time,"-t",end_time,name], stdin = subprocess.PIPE,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                process.stdin.write("y")
+
+        except IOError:
+                "ffmpeg -i "+video_filename+" -ss "+start_time+" -t "+end_time+" seg"+str(i)+".mov"
+                subprocess.call(command, shell=True)
+        time.sleep(1)
+
+
+
+
     return split_movie_names
 
 def optimum_num_segments(video_filename,audio_filename,target_num,start_dist,step):
@@ -109,7 +119,7 @@ def optimum_num_segments(video_filename,audio_filename,target_num,start_dist,ste
 
     ft_time, ft_sig = whiten(signal,Time,cutoff)
     (low,high) = target_num
-    
+
     print "Target # pieces between: ", low, high
     print
 
