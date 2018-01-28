@@ -1,0 +1,165 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:17:1-43:12
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:17:1-43:12
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:17:1-43:12
+MERGED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ce9a883981d9790a67e3f97581279ad0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0d69ec28042d78b509ea89322adf12f8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/64965cffc1e4b8b4ae6e903b7ff3aad7/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/108b82fe25f0c0d05e5a363b65c65f6a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b17b22b87f8a641d3ea2ad5527e169f9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b41b38b7d8384db24e78afd65d78ec92/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/59527653816e25394a0431fd547d7651/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/cfc28192a0c5869e681ca27239f0b05a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/d4e4816ad6bf6bc882722a1e5e76e565/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/872331d6bc253545f31466d99e2f1a90/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:17:1-30:12
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:17:1-43:12
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:17:1-43:12
+	package
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:18:5-47
+	android:versionName
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:20:5-30
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:17:11-69
+	android:versionCode
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:19:5-28
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:24:5-64
+	android:name
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:24:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:25:5-70
+	android:name
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:25:22-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:26:5-80
+	android:name
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:26:22-78
+application
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:28:5-41:19
+MERGED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ce9a883981d9790a67e3f97581279ad0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ce9a883981d9790a67e3f97581279ad0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0d69ec28042d78b509ea89322adf12f8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0d69ec28042d78b509ea89322adf12f8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/64965cffc1e4b8b4ae6e903b7ff3aad7/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/64965cffc1e4b8b4ae6e903b7ff3aad7/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/108b82fe25f0c0d05e5a363b65c65f6a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/108b82fe25f0c0d05e5a363b65c65f6a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b17b22b87f8a641d3ea2ad5527e169f9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b17b22b87f8a641d3ea2ad5527e169f9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b41b38b7d8384db24e78afd65d78ec92/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b41b38b7d8384db24e78afd65d78ec92/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/59527653816e25394a0431fd547d7651/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/59527653816e25394a0431fd547d7651/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/cfc28192a0c5869e681ca27239f0b05a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/cfc28192a0c5869e681ca27239f0b05a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/d4e4816ad6bf6bc882722a1e5e76e565/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/d4e4816ad6bf6bc882722a1e5e76e565/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/872331d6bc253545f31466d99e2f1a90/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/872331d6bc253545f31466d99e2f1a90/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:24:5-28:19
+	android:label
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:29:9-41
+	android:icon
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:30:9-45
+	android:allowBackup
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:28:18-44
+	android:theme
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:31:9-45
+activity#com.example.android.camera2video.CameraActivity
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:33:9-39:20
+	android:label
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:34:19-51
+	android:name
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:33:19-49
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:35:13-38:29
+action#android.intent.action.MAIN
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:36:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:37:17-77
+	android:name
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml:37:27-74
+uses-sdk
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ce9a883981d9790a67e3f97581279ad0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ce9a883981d9790a67e3f97581279ad0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0d69ec28042d78b509ea89322adf12f8/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0d69ec28042d78b509ea89322adf12f8/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/64965cffc1e4b8b4ae6e903b7ff3aad7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/64965cffc1e4b8b4ae6e903b7ff3aad7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/108b82fe25f0c0d05e5a363b65c65f6a/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/108b82fe25f0c0d05e5a363b65c65f6a/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b17b22b87f8a641d3ea2ad5527e169f9/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b17b22b87f8a641d3ea2ad5527e169f9/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b41b38b7d8384db24e78afd65d78ec92/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b41b38b7d8384db24e78afd65d78ec92/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/59527653816e25394a0431fd547d7651/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/59527653816e25394a0431fd547d7651/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/cfc28192a0c5869e681ca27239f0b05a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/cfc28192a0c5869e681ca27239f0b05a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/d4e4816ad6bf6bc882722a1e5e76e565/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/d4e4816ad6bf6bc882722a1e5e76e565/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/872331d6bc253545f31466d99e2f1a90/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/872331d6bc253545f31466d99e2f1a90/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+		ADDED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ce9a883981d9790a67e3f97581279ad0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ce9a883981d9790a67e3f97581279ad0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0d69ec28042d78b509ea89322adf12f8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0d69ec28042d78b509ea89322adf12f8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/64965cffc1e4b8b4ae6e903b7ff3aad7/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/64965cffc1e4b8b4ae6e903b7ff3aad7/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/108b82fe25f0c0d05e5a363b65c65f6a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/108b82fe25f0c0d05e5a363b65c65f6a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b17b22b87f8a641d3ea2ad5527e169f9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b17b22b87f8a641d3ea2ad5527e169f9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b41b38b7d8384db24e78afd65d78ec92/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b41b38b7d8384db24e78afd65d78ec92/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/59527653816e25394a0431fd547d7651/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/59527653816e25394a0431fd547d7651/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/cfc28192a0c5869e681ca27239f0b05a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/cfc28192a0c5869e681ca27239f0b05a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/d4e4816ad6bf6bc882722a1e5e76e565/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/d4e4816ad6bf6bc882722a1e5e76e565/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/872331d6bc253545f31466d99e2f1a90/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/872331d6bc253545f31466d99e2f1a90/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5e60888d93d0365c699d492f12f06b08/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/princesssteffykins/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b27c7c0df55d0cfb603fd7d453c16540/AndroidManifest.xml:26:13-58

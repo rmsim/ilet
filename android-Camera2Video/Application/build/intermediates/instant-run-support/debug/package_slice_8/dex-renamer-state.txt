@@ -1,0 +1,4 @@
+#Sun Jan 28 00:54:41 EST 2018
+base.0=/Users/princesssteffykins/AndroidStudioProjects/android-Camera2Video/Application/build/intermediates/transforms/dexMerger/debug/8
+path.0=classes.dex
+renamed.0=classes.dex
