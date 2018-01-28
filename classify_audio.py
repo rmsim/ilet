@@ -101,15 +101,14 @@ def test_files(training_videos,training_audio, testing_videos,testing_audio):
         gen_aud_from_vid(testing_videos[i],testing_audio[i])
         test_features.append(analyze_audio_file(testing_audio[i]))
 
-        preds = gnb.predict(test_features)
+    preds = gnb.predict(test_features)
 
-        for i,pred in enumerate(preds):
-            print "File: ", testing_videos[i]
-            print "Classification: ",classif[pred]
-            print
+    for i,pred in enumerate(preds):
+        print "File: ", testing_videos[i]
+        print "Classification: ",classif[pred]
+        print
 
-        return preds
+    return preds
 
 
-test_files(video_names,audio_names,
-test_vid,test_aud)
+
