@@ -4,7 +4,8 @@ import subprocess
 import wave
 import copy
 import sys
-
+import os
+import time
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
@@ -14,15 +15,21 @@ feature_names = np.array(["stddev","frac_silence","mean_freq","std_freq","mod_fr
 
 classif = {0:"clap",1:"music",2:"speech"}
 
-#mean pitch
+
 labels = np.array([0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2])
 train_features = []
 
 def gen_aud_from_vid(video_filename,audio_filename):
-    process = subprocess.Popen(["ffmpeg", "-i",video_filename,"-vn",audio_filename], stdin = subprocess.PIPE,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    process.stdin.write("y")
-    process = subprocess.Popen(['ffmpeg',  '-i', video_filename], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    stdout, stderr = process.communicate()
+
+    try:
+        process = subprocess.Popen(["ffmpeg", "-i",video_filename,"-vn",audio_filename],
+        stdin = subprocess.PIPE,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        process.stdin.write("y")
+
+    except IOError:
+        command = "ffmpeg -i "+video_filename+" -vn "+audio_filename
+        subprocess.call(command, shell=True)
+    time.sleep(1)
 
 
 def analyze_audio_file(audio_filename):
@@ -33,7 +40,6 @@ def analyze_audio_file(audio_filename):
     Time=np.linspace(0, len(signal)/fs, num=len(signal))
 
     aud_feats = []
-    #aud_feats.append(np.mean(signal))
     aud_feats.append(np.std(signal))
     silence_thresh = np.mean(signal)/1.
     cop = copy.deepcopy(signal)
@@ -55,22 +61,12 @@ def analyze_audio_file(audio_filename):
 
     return np.array(aud_feats)
 
-
-video_names = ["clap1.mov","clap2.mov","clap3.mov","clap4.mov","clap5.mov","clap6.mov","clap7.mov","clap8.mov","clap9.mov","clap10.mov",
-                    "music1.mov","music2.mov","music3.mov","music4.mov","music5.mov","music6.mov","music7.mov","music8.mov","music9.mov","music10.mov",
-                    "speech1.mov","speech2.mov","speech3.mov","speech4.mov","speech5.mov","speech6.mov","speech7.mov","speech8.mov","speech9.mov","speech10.mov"]
-
-audio_names = ["1.wav","2.wav","3.wav","4.wav","5.wav","6.wav","7.wav","8.wav",
-    "9.wav","10.wav","11.wav","12.wav","13.wav","14.wav","15.wav","16.wav","17.wav","18.wav",
-    "19.wav","20.wav","21.wav","22.wav","23.wav","24.wav","25.wav","26.wav","27.wav","28.wav","29.wav","30.wav"]
-
-
-def train_model(vn, an):
+def train_model(path_to_training_vids,vn, an):
     print "Training model..."
     for i, name in enumerate(vn):
 
-        #gen_aud_from_vid(vn[i],an[i])
-        train_features.append(analyze_audio_file(an[i]))
+        gen_aud_from_vid(path_to_training_vids+vn[i],path_to_training_vids+an[i])
+        train_features.append(analyze_audio_file(path_to_training_vids+an[i]))
 
     # Split our data
     train, test, train_labels, test_labels = train_test_split(train_features,labels,test_size=0)
@@ -86,13 +82,15 @@ def train_model(vn, an):
     return gnb
 
 
-def test_files(training_videos,training_audio, testing_videos,testing_audio):
+def test_files(path_to_training_vids,training_videos,training_audio, testing_videos,testing_audio):
     test_features = []
-    gnb = train_model(training_videos, training_audio)
+    gnb = train_model(path_to_training_vids,training_videos, training_audio)
     print "Analyzing files..."
+
     for i, name in enumerate(testing_audio):
 
         gen_aud_from_vid(testing_videos[i],testing_audio[i])
+
         test_features.append(analyze_audio_file(testing_audio[i]))
 
     preds = gnb.predict(test_features)
@@ -101,5 +99,14 @@ def test_files(training_videos,training_audio, testing_videos,testing_audio):
         print "File: ", testing_videos[i]
         print "Classification: ",classif[pred]
         print
+
+        if pred == 0:
+            os.rename(testing_videos[i], "clap/"+testing_videos[i])
+        if pred == 1:
+            os.rename(testing_videos[i], "music/"+testing_videos[i])
+        if pred == 2:
+            os.rename(testing_videos[i], "speech/"+testing_videos[i])
+
+        os.remove(testing_audio[i])
 
     return preds
