@@ -16,7 +16,8 @@ from classify_audio import *
 # files to analyze
 video_filename = "comptest.mov"
 audio_filename = "comptest.wav"
-low, high = 4, 5
+path_to_training_vids = "training_files/"
+low, high = 4, 6
 start_dist = 150
 step = 50
 
@@ -42,6 +43,6 @@ test_aud = []
 for i in test_vid:
     test_aud.append(i[:-4]+".wav")
 
-test_files(video_names,audio_names,test_vid,test_aud)
+test_files(path_to_training_vids,video_names,audio_names,test_vid,test_aud)
 
 print "Done with analysis"
