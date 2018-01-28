@@ -7,5 +7,5 @@ You may need to change ```low,high``` (the number of segments to split the video
 
 To analyze video snippets, we processed screenshots of the split files with PyTorch. The image captioning tutorial is made by [@yunjey](https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials/03-advanced/image_captioning). Following the instructions detailed in the Usage, we can then test the model by calling:
 ```
-$ python sample.py --image='img/example.png'
+$ python sample.py --image='png/example.png'
 ```
