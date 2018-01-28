@@ -1,4 +1,4 @@
-# ilet
+# iLet for SheHacks'18
 
 
 To analyze video files, run ```ensemble.py```, making sure to change ```video_filename``` and ```audio_filename```. The file will split the video into natural segments as well as classify each one as a clap, music, or speech.
