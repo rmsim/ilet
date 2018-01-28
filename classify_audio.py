@@ -65,11 +65,11 @@ def train_model(path_to_training_vids,vn, an):
     print "Training model..."
     for i, name in enumerate(vn):
 
-        gen_aud_from_vid(path_to_training_vids+vn[i],path_to_training_vids+an[i])
+        #gen_aud_from_vid(path_to_training_vids+vn[i],path_to_training_vids+an[i])
         train_features.append(analyze_audio_file(path_to_training_vids+an[i]))
 
     # Split our data
-    train, test, train_labels, test_labels = train_test_split(train_features,labels,test_size=0)
+    train, test, train_labels, test_labels = train_test_split(train_features,labels,test_size=0.)
 
     # Initialize our classifier
     gnb = RandomForestClassifier()
@@ -95,6 +95,10 @@ def test_files(path_to_training_vids,training_videos,training_audio, testing_vid
 
     preds = gnb.predict(test_features)
 
+    filename = testing_videos[0][:-5]+"_registry.txt"
+    file = open(filename,"w")
+
+
     for i,pred in enumerate(preds):
         print "File: ", testing_videos[i]
         print "Classification: ",classif[pred]
@@ -102,11 +106,17 @@ def test_files(path_to_training_vids,training_videos,training_audio, testing_vid
 
         if pred == 0:
             os.rename(testing_videos[i], "clap/"+testing_videos[i])
+            line = testing_videos[i]+","+"clap\n"
+            file.write(line)
         if pred == 1:
             os.rename(testing_videos[i], "music/"+testing_videos[i])
+            line = testing_videos[i]+","+"music\n"
+            file.write(line)
         if pred == 2:
             os.rename(testing_videos[i], "speech/"+testing_videos[i])
+            line = testing_videos[i]+","+"speech\n"
+            file.write(line)
 
         os.remove(testing_audio[i])
-
+    file.close()
     return preds
