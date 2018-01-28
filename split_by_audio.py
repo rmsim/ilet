@@ -7,21 +7,8 @@ import subprocess
 import re
 
 
-video_filename = "speech6.mov"
-audio_filename = "speech6.wav"
-thresh = 1.
-start_dist = 150
-step = 50
-low,high=3,5
-
-
-'''
-ideally we would train dist for number of sounds
-fixing the errors / override
-'''
-
-#audio_filename = "f1ast01p1_ms.wav"
-
+thresh = 1. # change this depending on your silence theshold
+cutoff=.000001 # change depending on how much hgih frequency noise to get rid of
 
 
 def plot_raw_sound(signal,Time,fs):
@@ -72,7 +59,7 @@ def plot_split_time(time_split,sig_split):
     plt.savefig("split sig")
     return i
 
-def split_video(time_split,signal,ind_split,tot_seconds):
+def split_video(video_filename,time_split,signal,ind_split,tot_seconds):
     break_points = []
     for i in range(len(time_split)):
         break_points.append(time_split[i][0])
@@ -80,17 +67,19 @@ def split_video(time_split,signal,ind_split,tot_seconds):
         break_points = np.append(0.,break_points)
     if 1 not in break_points:
         break_points = np.append(break_points,1.)
+    split_movie_names = []
     for i in range(len(break_points[:-1])):
         start_time = str(break_points[i])
         end_time = str(break_points[i+1])
         #command = "ffmpeg -i "+video_filename+" -ss "+start_time+" -t "+end_time+" seg"+str(i)+".mov"
         #subprocess.call(command, shell=True)
         name = "seg"+str(i)+".mov"
+        split_movie_names.append(name)
         process = subprocess.Popen(["ffmpeg","-i",video_filename,"-ss",start_time,"-t",end_time,name], stdin = subprocess.PIPE,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         process.stdin.write("y")
-    return break_points
+    return split_movie_names
 
-def optimum_num_segments(target_num,start_dist = 150):
+def optimum_num_segments(video_filename,audio_filename,target_num,start_dist,step):
 
     process = subprocess.Popen(["ffmpeg", "-i",video_filename,"-vn",audio_filename], stdin = subprocess.PIPE,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     process.stdin.write("y")
@@ -118,12 +107,15 @@ def optimum_num_segments(target_num,start_dist = 150):
         sys.exit(0)
 
 
-    ft_time, ft_sig = whiten(signal,Time,cutoff=.000001)
-
-
+    ft_time, ft_sig = whiten(signal,Time,cutoff)
     (low,high) = target_num
+    
+    print "Target # pieces between: ", low, high
+    print
+
+
     num_pieces = 0
-    while num_pieces not in range(low,high+1):
+    while num_pieces+1 not in range(low,high+1):
         start_dist += step
         print "Trying distance: ", start_dist
 
@@ -131,17 +123,16 @@ def optimum_num_segments(target_num,start_dist = 150):
         ind_split = split_sound(ft_time,ft_sig,thresh,dist=start_dist)
         num_pieces = len(ind_split)
         print "Number of pieces: ", num_pieces+1
-        if num_pieces in range(low,high+1):
+        if num_pieces+1 in range(low,high+1):
             print "Target number achieved!"
         else:
             print "Increasing distance by 50..."
-
+        print
     time_split = np.split(ft_time,ind_split)
     sig_split = np.split(ft_sig,ind_split)
 
     num_pieces = plot_split_time(time_split,sig_split)
 
-    split_video(time_split,signal,ind_split,tot_seconds)
+    split_movie_names = split_video(video_filename,time_split,signal,ind_split,tot_seconds)
+    return split_movie_names
 
-
-optimum_num_segments((low,high),start_dist)
