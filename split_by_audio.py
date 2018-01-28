@@ -135,4 +135,3 @@ def optimum_num_segments(video_filename,audio_filename,target_num,start_dist,ste
 
     split_movie_names = split_video(video_filename,time_split,signal,ind_split,tot_seconds)
     return split_movie_names
-
