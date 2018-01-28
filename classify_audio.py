@@ -69,7 +69,7 @@ def train_model(vn, an):
     print "Training model..."
     for i, name in enumerate(vn):
 
-        gen_aud_from_vid(vn[i],an[i])
+        #gen_aud_from_vid(vn[i],an[i])
         train_features.append(analyze_audio_file(an[i]))
 
     # Split our data
@@ -86,18 +86,12 @@ def train_model(vn, an):
     return gnb
 
 
-
-
-test_vid = ["testc.mov"]
-test_aud = ["testa.wav"]
-test_features = []
-
 def test_files(training_videos,training_audio, testing_videos,testing_audio):
-
+    test_features = []
     gnb = train_model(training_videos, training_audio)
-
+    print "Analyzing files..."
     for i, name in enumerate(testing_audio):
-        print "Analyzing files..."
+
         gen_aud_from_vid(testing_videos[i],testing_audio[i])
         test_features.append(analyze_audio_file(testing_audio[i]))
 
@@ -109,6 +103,3 @@ def test_files(training_videos,training_audio, testing_videos,testing_audio):
         print
 
     return preds
-
-
-
